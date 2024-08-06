@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-md-5 col-md-offset-4">
+    <div class="panel panel-primary">
+      <div class="panel-heading">View the Flight</div>
+      <div class="panel-body">
+
+        <!-- Code the required HTML output -->
+        <table class="table table-bordered text-center">
+          <thead>
+            <th>Passenger Name</th>
+            <th>No of tickets</th>
+            <th>booking id</th>
+            <th>amount</th>
+            <th>delete</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let flights of flightDetails">
+              <td>{{flights.passengerName}}</td>
+              <td>{{flights.noOfTickets}}</td>
+              <td>{{flights.id}}</td>
+              <td>{{flights.totalAmount}}</td>
+              <td><button class="btn btn-danger" (click)="delete(flights.id)">delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+    </div>
+  </div>
+</div>
